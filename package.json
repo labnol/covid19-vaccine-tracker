@@ -1,0 +1,59 @@
+{
+  "name": "vaccine-tracker",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Amit Agarwal",
+    "email": "amit@labnol.org",
+    "url": "https://www.labnol.org"
+  },
+  "private": false,
+  "scripts": {
+    "tailwind": "npx tailwind build src/tailwind.css -o src/index.css",
+    "prestart": "npm run tailwind",
+    "start": "react-scripts start",
+    "prebuild": "cross-env NODE_ENV=production npm run tailwind",
+    "build": "react-scripts build",
+    "inline": "npm run build && gulp",
+    "deploy": "npm run inline && cd ./gas && npm run deploy && cd .."
+  },
+  "keywords": [
+    "react",
+    "tailwindcss",
+    "tailwindui",
+    "vscode",
+    "create-react-app"
+  ],
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/typography": "^0.4.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "tailwindcss": "^2.1.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "eslint-plugin-prettier": "^3.4.0",
+    "gulp": "^4.0.2",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.2",
+    "postcss": "^8.2.13",
+    "prettier": "^2.2.1"
+  }
+}

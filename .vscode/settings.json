@@ -1,0 +1,12 @@
+{
+  "eslint.alwaysShowStatus": true,
+  "editor.formatOnSave": false,
+  "files.autoSave": "onFocusChange",
+  "eslint.validate": [
+    "javascript"
+  ],
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "css.validate": false
+}

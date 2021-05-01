@@ -1,0 +1,13 @@
+{
+  "root": true,
+  "extends": ["labnol"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "printWidth": 80,
+        "singleQuote": true
+      }
+    ]
+  }
+}
