@@ -11,7 +11,7 @@ export default function Saved() {
         </p>
         <p className="mt-8">
           <a
-            href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fnull.jsbin.com%2F&ref_src=twsrc%5Etfw&related=labnol&text=Tweet%20Text&tw_p=tweetbutton&url=https%3A%2F%2Fdigitalinspiration.com%2F&via=labnol"
+            href="https://twitter.com/intent/tweet?text=Easily%20track%20the%20availability%20of%20%23Covid19Vaccine%20near%20you%20with%20Google%20Sheets&tw_p=tweetbutton&url=https%3A%2F%2Fwww.labnol.org%2Fcovid19-vaccine-tracker-210501&via=labnol"
             target="_blank"
             rel="noreferrer"
             className="no-underline inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -27,7 +27,7 @@ export default function Saved() {
             Share on Twitter
           </a>
           <a
-            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdigitalinspiration.com%2F"
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.labnol.org%2Fcovid19-vaccine-tracker-210501"
             target="_blank"
             rel="noreferrer"
             className="ml-4 no-underline inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
