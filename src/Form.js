@@ -95,7 +95,7 @@ export default function Form({ onSubmit, onChange, formData }) {
           <option value="day">Every day</option>
           <option value="12">Every 12 hours</option>
           <option value="6">Every 6 hours</option>
-          <option value="4">Every 6 hours</option>
+          <option value="4">Every 4 hours</option>
           <option value="2">Every 2 hours</option>
         </select>
       </div>
