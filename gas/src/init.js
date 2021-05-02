@@ -4,6 +4,6 @@ import { createTrigger } from './trigger';
 
 export const init = (data) => {
   setData(data);
-  createTrigger();
+  createTrigger(data.frequency);
   app();
 };

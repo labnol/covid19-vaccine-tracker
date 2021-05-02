@@ -10,6 +10,6 @@ export const onOpen = () => {
 export const showApp = () => {
   const html = HtmlService.createHtmlOutputFromFile('app.html')
     .setWidth(480)
-    .setHeight(640);
+    .setHeight(680);
   SpreadsheetApp.getUi().showModalDialog(html, 'COVID-19 Vaccine Near Me 🇮🇳');
 };

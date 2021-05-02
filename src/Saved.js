@@ -1,13 +1,37 @@
-export default function Saved() {
+export default function Saved({ daily }) {
   return (
-    <div className="min-h-screen flex flex-col justify-center px-8">
+    <div className="min-h-screen flex flex-col justify-center px-4">
       <div className="flex flex-col justify-center max-w-lg w-full mx-auto">
-        <p className="font-medium text-indigo-500">
+        <p className="font-medium text-gray-500">
           Awesome! We'll send an email when vaccines become available in your
-          area. The email alerts are sent once per day around 8 am.
+          area.&nbsp;
+          {daily
+            ? 'The email alerts are sent once per day around 8 am.'
+            : 'The availability is checked every few hours.'}
         </p>
-        <p className="font-medium text-indigo-400 mt-8">
-          Please help spread the word!
+        <p className="font-medium text-gray-500 mt-6">
+          The vaccine tracker is developed by&nbsp;
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://www.labnol.org"
+            className="text-indigo-600 font-semibold"
+          >
+            Amit Agarwal
+          </a>{' '}
+          (Google Developer Expert).&nbsp; Please tweet&nbsp;
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://twitter.com/intent/follow?region=follow_link&screen_name=labnol&tw_p=followbutton"
+            className="text-indigo-600 font-semibold"
+          >
+            @labnol
+          </a>{' '}
+          for feedback.
+        </p>
+        <p className="font-medium text-indigo-500 mt-6">
+          If you find this work useful, please help spread the word! 🙏🏻
         </p>
         <p className="mt-8">
           <a

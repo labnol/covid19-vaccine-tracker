@@ -8,6 +8,7 @@ export default function App() {
   const [formData, setFormData] = useState({
     pincode: '',
     email: '',
+    frequency: 'day',
     young: true,
     old: true,
   });
@@ -42,7 +43,7 @@ export default function App() {
     }));
   };
 
-  if (saved) return <Saved />;
+  if (saved) return <Saved daily={formData.frequency === 'day'} />;
 
   return (
     <div className="min-h-screen flex flex-col justify-center px-2">

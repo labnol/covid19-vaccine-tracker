@@ -15,7 +15,7 @@ export default function Form({ onSubmit, onChange, formData }) {
             id="pincode"
             name="pincode"
             type="text"
-            placeholder="Enter one or more pincodes here..."
+            placeholder="Enter one or more pincodes (comma separated)..."
             required
             className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
           />
@@ -76,6 +76,28 @@ export default function Form({ onSubmit, onChange, formData }) {
             45+ years
           </label>
         </div>
+      </div>
+
+      <div>
+        <label
+          htmlFor="frequency"
+          className="block text-sm font-medium text-gray-700"
+        >
+          Check Vaccine Availability
+        </label>
+        <select
+          id="frequency"
+          name="frequency"
+          value={formData.frequency}
+          onChange={onChange}
+          className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+        >
+          <option value="day">Every day</option>
+          <option value="12">Every 12 hours</option>
+          <option value="6">Every 6 hours</option>
+          <option value="4">Every 6 hours</option>
+          <option value="2">Every 2 hours</option>
+        </select>
       </div>
 
       <div>
