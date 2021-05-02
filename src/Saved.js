@@ -35,7 +35,7 @@ export default function Saved({ daily }) {
         </p>
         <p className="mt-8">
           <a
-            href="https://twitter.com/intent/tweet?text=Easily%20track%20the%20availability%20of%20%23Covid19Vaccine%20near%20you%20with%20Google%20Sheets&tw_p=tweetbutton&url=https%3A%2F%2Fwww.labnol.org%2Fcovid19-vaccine-tracker-210501&via=labnol"
+            href="https://twitter.com/intent/tweet?text=It%20works!%20Get%20alerts%20when%20%23Covid19Vaccine%20is%20available%20near%20your%20location&url=https%3A%2F%2Fwww.labnol.org%2Fcovid19-vaccine-tracker-210501&via=labnol"
             target="_blank"
             rel="noreferrer"
             className="no-underline inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -69,6 +69,20 @@ export default function Saved({ daily }) {
               />
             </svg>
             Share on Facebook
+          </a>
+        </p>
+        <p className="mt-8">
+          <a
+            rel="noreferrer"
+            href="https://www.producthunt.com/posts/covid-19-vaccine-tracker-for-india?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-covid-19-vaccine-tracker-for-india"
+            target="_blank"
+          >
+            <img
+              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=294449&theme=light"
+              alt="COVID-19 Vaccine Tracker for India 🇮🇳 - Easily track availability of vaccines near your location | Product Hunt"
+              width="250"
+              height="54"
+            />
           </a>
         </p>
       </div>

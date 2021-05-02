@@ -1,4 +1,5 @@
 /* eslint-disable camelcase */
+
 export const findCenters = (data, youngAdultsOnly) => {
   try {
     const { centers = [] } = JSON.parse(data);
@@ -16,6 +17,9 @@ export const findCenters = (data, youngAdultsOnly) => {
             };
           })
           .filter(({ available_capacity }) => available_capacity !== 0)
+          .filter(({ available_capacity }) =>
+            /^\d+$/.test(String(available_capacity))
+          )
           .filter(({ min_age_limit }) =>
             youngAdultsOnly ? min_age_limit === 18 : true
           ),

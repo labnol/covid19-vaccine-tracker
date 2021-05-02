@@ -45,7 +45,7 @@ export default function Form({ onSubmit, onChange, formData }) {
 
       <div className="flex items-center justify-start">
         <div className="flex items-center">
-          <span className="ml-2 block text-sm text-gray-900">
+          <span className="block text-sm text-gray-900">
             Vaccination Age Group
           </span>
         </div>
@@ -95,8 +95,9 @@ export default function Form({ onSubmit, onChange, formData }) {
           <option value="day">Every day</option>
           <option value="12">Every 12 hours</option>
           <option value="6">Every 6 hours</option>
-          <option value="4">Every 6 hours</option>
+          <option value="4">Every 4 hours</option>
           <option value="2">Every 2 hours</option>
+          <option value="1">Every hour</option>
         </select>
       </div>
 
