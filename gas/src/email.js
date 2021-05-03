@@ -1,4 +1,5 @@
 import { getBody } from './body';
+import { footer } from './footer';
 
 export const sendEmail = (centers, email) => {
   const { length } = centers;
@@ -9,7 +10,11 @@ export const sendEmail = (centers, email) => {
       MailApp.sendEmail(
         email,
         `Vaccines are available in ${count} centers`,
-        body
+        body + footer,
+        {
+          name: 'CoWIN Vaccine Tracker',
+          replyTo: 'support@digitalinspiration.com',
+        }
       );
       CacheService.getScriptCache().put('body', body, 21600);
     }

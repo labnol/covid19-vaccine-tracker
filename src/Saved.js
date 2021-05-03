@@ -1,6 +1,6 @@
 export default function Saved({ daily }) {
   return (
-    <div className="min-h-screen flex flex-col justify-center px-4">
+    <div className="min-h-screen flex flex-col justify-center">
       <div className="flex flex-col justify-center max-w-lg w-full mx-auto">
         <p className="font-medium text-gray-500">
           Awesome! We'll send an email when vaccines become available in your
@@ -69,20 +69,6 @@ export default function Saved({ daily }) {
               />
             </svg>
             Share on Facebook
-          </a>
-        </p>
-        <p className="mt-8">
-          <a
-            rel="noreferrer"
-            href="https://www.producthunt.com/posts/covid-19-vaccine-tracker-for-india?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-covid-19-vaccine-tracker-for-india"
-            target="_blank"
-          >
-            <img
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=294449&theme=light"
-              alt="COVID-19 Vaccine Tracker for India 🇮🇳 - Easily track availability of vaccines near your location | Product Hunt"
-              width="250"
-              height="54"
-            />
           </a>
         </p>
       </div>
