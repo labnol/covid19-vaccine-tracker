@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Error from './Error';
 import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
@@ -13,15 +14,20 @@ export default function App() {
     old: true,
   });
 
+  const [error, setError] = useState(false);
+
   const [saved, setSaved] = useState(false);
 
   useEffect(() => {
     if (window.google) {
       window.google.script.run
-        .withSuccessHandler(function (e) {
+        .withSuccessHandler((e) => {
           if (e !== null) {
             setFormData(e);
           }
+        })
+        .withFailureHandler(() => {
+          setError(true);
         })
         .getData();
     }
@@ -33,6 +39,9 @@ export default function App() {
       .withSuccessHandler(function (e) {
         setSaved(true);
       })
+      .withFailureHandler(() => {
+        setError(true);
+      })
       .init(formData);
   };
 
@@ -42,6 +51,8 @@ export default function App() {
       [name]: type === 'checkbox' ? checked : value,
     }));
   };
+
+  if (error) return <Error />;
 
   if (saved) return <Saved daily={formData.frequency === 'day'} />;
 

@@ -35,7 +35,7 @@ export default function Saved({ daily }) {
         </p>
         <p className="mt-8">
           <a
-            href="https://twitter.com/intent/tweet?text=It%20works!%20Get%20alerts%20when%20%23Covid19Vaccine%20is%20available%20near%20your%20location&url=https%3A%2F%2Fwww.labnol.org%2Fcovid19-vaccine-tracker-210501&via=labnol"
+            href="https://twitter.com/intent/tweet?text=🇮🇳%20Get%20alerts%20when%20%23Covid19Vaccine%20slots%20open%20up%20near%20your%20location&url=https%3A%2F%2Fwww.labnol.org%2Fcovid19-vaccine-tracker-210501&via=labnol"
             target="_blank"
             rel="noreferrer"
             className="no-underline inline-flex items-center px-3 py-2 border border-transparent shadow-sm text-sm leading-4 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
