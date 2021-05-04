@@ -7,19 +7,27 @@ export default function Header() {
         alt="Vaccine"
       />
       <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-        Check Vaccine Availability
+        Monitor Vaccine Availability
       </h2>
       <p className="mt-2 text-center text-sm text-gray-600">
-        Visit{' '}
+        Developed by{' '}
         <a
           target="_blank"
           rel="noreferrer"
-          href="https://www.cowin.gov.in/home"
+          href="https://www.labnol.org/about"
           className="font-medium text-indigo-600 hover:text-indigo-500"
         >
-          cowin.gov.in
-        </a>{' '}
-        to book your appointment
+          Amit Agarwal
+        </a>
+        &nbsp;for&nbsp;
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href="https://digitalinspiration.com/"
+          className="font-medium text-indigo-600 hover:text-indigo-500"
+        >
+          Digital Inspiration
+        </a>
       </p>
     </div>
   );

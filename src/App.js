@@ -1,18 +1,21 @@
 import { useEffect, useState } from 'react';
 import Error from './Error';
-import Footer from './Footer';
 import Form from './Form';
 import Header from './Header';
 import Saved from './Saved';
+import { getMaxDate, getMinDate } from './utils';
 
 export default function App() {
   const [formData, setFormData] = useState({
     pincode: '',
     email: '',
     frequency: 'day',
-    young: true,
-    old: true,
+    age: 'any',
+    start_date: getMinDate(),
+    end_date: getMaxDate(),
   });
+
+  const [sending, setSending] = useState(false);
 
   const [error, setError] = useState(false);
 
@@ -35,6 +38,7 @@ export default function App() {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
+    setSending(true);
     window.google.script.run
       .withSuccessHandler(function (e) {
         setSaved(true);
@@ -54,15 +58,19 @@ export default function App() {
 
   if (error) return <Error />;
 
-  if (saved) return <Saved daily={formData.frequency === 'day'} />;
-
   return (
     <div className="min-h-screen flex flex-col justify-center px-2">
       <Header />
-      <div className="mt-8 mx-auto w-full px-8">
-        <Form onSubmit={onFormSubmit} onChange={onChange} formData={formData} />
-        <Footer />
-      </div>
+      {saved ? (
+        <Saved daily={formData.frequency === 'day'} />
+      ) : (
+        <Form
+          onSubmit={onFormSubmit}
+          onChange={onChange}
+          formData={formData}
+          sending={sending}
+        />
+      )}
     </div>
   );
 }

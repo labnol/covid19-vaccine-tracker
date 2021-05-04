@@ -1,6 +1,8 @@
 /* eslint-disable camelcase */
 
-export const findCenters = (data, youngAdultsOnly) => {
+import { compareMaxDate, compareMinDate } from './date';
+
+export const findCenters = (data, formData) => {
   try {
     const { centers = [] } = JSON.parse(data);
     return centers
@@ -20,8 +22,15 @@ export const findCenters = (data, youngAdultsOnly) => {
           .filter(({ available_capacity }) =>
             /^\d+$/.test(String(available_capacity))
           )
-          .filter(({ min_age_limit }) =>
-            youngAdultsOnly ? min_age_limit === 18 : true
+          .filter(({ min_age_limit }) => {
+            if (formData.age === '18') return min_age_limit === 18;
+            if (formData.age === '45') return min_age_limit === 45;
+            return true;
+          })
+          .filter(
+            ({ date }) =>
+              compareMinDate(date, formData.start_date) &&
+              compareMaxDate(date, formData.end_date)
           ),
       }))
       .filter(({ sessions }) => sessions.length > 0);

@@ -5,23 +5,24 @@ import { requests } from './requests';
 
 export const app = () => {
   try {
-    const data = getData();
-    if (data) {
-      const { pincode, email, young, old } = data;
-      const pincodes = pincode
-        .split(/[,\s.:]/)
-        .filter((e) => /^\d{6}$/.test(e));
+    if (MailApp.getRemainingDailyQuota() > 1) {
+      const data = getData();
+      if (data) {
+        const { pincode, email, ...rest } = data;
+        const pincodes = pincode
+          .split(/[,\s.:]/)
+          .filter((e) => /^\d{6}$/.test(e));
 
-      if (pincodes.length > 0) {
-        const youngAdultsOnly = young && !old;
-        const responses = requests(pincodes);
+        if (pincodes.length > 0) {
+          const responses = requests(pincodes);
 
-        const locations = responses
-          .map((response) => findCenters(response, youngAdultsOnly))
-          .filter((centers) => centers.length > 0);
+          const locations = responses
+            .map((centers) => findCenters(centers, rest))
+            .filter((centers) => centers.length > 0);
 
-        if (locations.length > 0) {
-          sendEmail(locations, email);
+          if (locations.length > 0) {
+            sendEmail(locations, email);
+          }
         }
       }
     }

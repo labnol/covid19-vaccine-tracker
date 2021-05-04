@@ -1,4 +1,6 @@
 {
+  "scriptId:prod": "1i92smktGsKPu1VjsHtshn3rDp8LvNAL6JgJ6wXyy5UpbNBlkOAXAmNsB",
+  "scriptId:dev": "1iHEMUqdmSpVtFhe6oab39HiBpIOrnQVmAXncZtRXomZ13q1Om8FcbF6_",
   "scriptId": "1i92smktGsKPu1VjsHtshn3rDp8LvNAL6JgJ6wXyy5UpbNBlkOAXAmNsB",
   "rootDir": "dist"
 }

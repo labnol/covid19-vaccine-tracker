@@ -10,7 +10,12 @@ export const createTrigger = (frequency) => {
   if (frequency === 'day') {
     trigger.atHour(8).everyDays(1).create();
   } else {
-    trigger.everyHours(Number(frequency)).create();
+    const time = Number(frequency);
+    if (time === 5 || time === 15 || time === 30) {
+      trigger.everyMinutes(frequency).create();
+    } else {
+      trigger.everyHours(frequency).create();
+    }
   }
 };
 
