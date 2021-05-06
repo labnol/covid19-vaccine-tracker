@@ -1,5 +1,5 @@
 # dependencies
-/node_modules
+**/node_modules
 /.pnp
 .pnp.js
 
@@ -15,3 +15,4 @@ npm-debug.log*
 .eslintcache
 
 app.html
+token.js
