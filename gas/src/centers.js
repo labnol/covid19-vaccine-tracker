@@ -12,21 +12,27 @@ export const findCenters = (response, formData) => {
           district_name,
           pincode,
           sessions: sessions
-            .map(({ date, available_capacity, min_age_limit }) => {
+            .map(({ date, available_capacity, min_age_limit, vaccine }) => {
               return {
                 date,
                 available_capacity,
                 min_age_limit,
+                vaccine,
               };
             })
-            .filter(({ available_capacity }) => available_capacity !== 0)
-            .filter(({ available_capacity }) =>
-              /^\d+$/.test(String(available_capacity))
+            .filter(
+              ({ available_capacity }) =>
+                available_capacity !== 0 &&
+                /^\d+$/.test(String(available_capacity))
             )
             .filter(({ min_age_limit }) => {
               if (formData.age === '18') return min_age_limit === 18;
               if (formData.age === '45') return min_age_limit === 45;
               return true;
+            })
+            .filter(({ vaccine }) => {
+              if (!vaccine || formData.vaccine === 'any') return true;
+              return formData.vaccine.toLowerCase() === vaccine.toLowerCase();
             })
             .filter(
               ({ date }) =>

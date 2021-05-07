@@ -11,6 +11,7 @@ export default function App() {
     email: '',
     frequency: 'day',
     age: 'any',
+    vaccine: 'any',
     start_date: getMinDate(),
     end_date: getMaxDate(),
   });
@@ -39,14 +40,18 @@ export default function App() {
   const onFormSubmit = (event) => {
     event.preventDefault();
     setSending(true);
-    window.google.script.run
-      .withSuccessHandler(function (e) {
-        setSaved(true);
-      })
-      .withFailureHandler(() => {
-        setError(true);
-      })
-      .init(formData);
+    if (window.google) {
+      window.google.script.run
+        .withSuccessHandler(function (e) {
+          setSaved(true);
+        })
+        .withFailureHandler(() => {
+          setError(true);
+        })
+        .init(formData);
+    } else {
+      console.dir(formData);
+    }
   };
 
   const onChange = ({ target: { name, value, type, checked } }) => {
