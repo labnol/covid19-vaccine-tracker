@@ -6,7 +6,14 @@
 
 [![Vaccine Tracker for India](./screenshot.png)](https://www.labnol.org/covid19-vaccine-tracker-210501)
 
-👉🏻 [India COVID-19 Vaccine Tracker](https://www.labnol.org/covid19-vaccine-tracker-210501)
+## Disable Email Alerts for Vaccine ❎
 
-[How to Stop Vaccine Alerts](https://twitter.com/labnol/status/1394525661767757825)
+👉🏻  [How to Stop Vaccine Alerts](https://twitter.com/labnol/status/1394525661767757825)
 
+If you have been vaccinated and would like the vaccine tracker to stop sending you email alerts, here are the steps:
+
+1. Go to https://script.google.com/home/triggers
+2. Click the 3-dot menu near the Vaccine Alerts project in the list.
+3. Click Delete Trigger from the menu.
+
+![Disable Vaccine Alerts](./disable.jpg)
