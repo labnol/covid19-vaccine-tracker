@@ -49,6 +49,20 @@ export default function Vaccine({ value, onChange }) {
           COVAXIN
         </label>
       </div>
+      <div className="flex items-center ml-4">
+        <input
+          onChange={onChange}
+          id="SPUTNIK V"
+          value="SPUTNIK V"
+          name="vaccine"
+          type="radio"
+          checked={value === 'SPUTNIK V'}
+          className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+        />
+        <label htmlFor="SPUTNIK V" className="ml-2 block text-sm text-gray-900">
+          COVAXIN
+        </label>
+      </div>
     </div>
   );
 }
